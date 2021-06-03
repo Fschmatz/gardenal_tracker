@@ -29,7 +29,7 @@ class AppInfo extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Center(
-            child: Text('Gardenal de Cachorro Tracker',
+            child: Text('Gardenal de Cachorro Tracker Versão 1.0',
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
