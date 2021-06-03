@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        backgroundColor: Color(0xFFF7F7F7),
-        primaryColor: Color(0xFFF7F7F7),
+        backgroundColor: Color(0xFFF4F4F4),
+        primaryColor: Color(0xFFF4F4F4),
         accentColor: Color(0xFF3F8CCB),
         scaffoldBackgroundColor: Color(0xFFFFFFFF),
       ),
@@ -94,7 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 shrinkWrap: true,
                 itemCount: doses.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 6,
+                  crossAxisCount: 5,
+                  childAspectRatio: 1.15,
                 ),
                 itemBuilder: (BuildContext context, int index) {
                   return DoseCard(

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -28,7 +29,8 @@ class AppInfo extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Center(
-            child: Text('Gardenal de Cachorro Tracker Versão 1.1.1',
+            child: Text('Gardenal de Cachorro Tracker Versão 1.1.2',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
