@@ -8,7 +8,7 @@ class AppInfo extends StatelessWidget {
     launch(url);
   }
 
-  Color? themeColorApp = Color(0xFF508BDF);
+  Color? themeColorApp = Color(0xFF3A8CCB);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class AppInfo extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Center(
-            child: Text('Gardenal de Cachorro Tracker Versão 1.0',
+            child: Text('Gardenal de Cachorro Tracker Versão 1.1',
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,

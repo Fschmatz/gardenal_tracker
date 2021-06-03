@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         backgroundColor: Color(0xFFF7F7F9),
         primaryColor: Color(0xFFF7F7F9),
-        accentColor: Color(0xFF508BDF),
+        accentColor: Color(0xFF3A8CCB),
         scaffoldBackgroundColor: Color(0xFFF7F7F9),
       ),
       home: MyHomePage(title: 'Gardenal Tracker'),
@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 shrinkWrap: true,
                 itemCount: doses.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 7,
+                  crossAxisCount: 6,
                 ),
                 itemBuilder: (BuildContext context, int index) {
                   return DoseCard(
@@ -110,11 +110,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
         child: FloatingActionButton.extended(
           onPressed: () {
             adicionarDose();
           },
+          backgroundColor: Colors.pinkAccent[700],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),

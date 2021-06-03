@@ -17,7 +17,7 @@ class _DoseCardState extends State<DoseCard> {
   Widget build(BuildContext context) {
 
     return Card(
-      color: Color(0xFF508BDF).withOpacity(0.8),
+      color: Color(0xFF3A8CCB).withOpacity(0.8),
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
@@ -29,7 +29,9 @@ class _DoseCardState extends State<DoseCard> {
           onLongPress: () => widget.delete(
             (widget.id),
           ),
-          child: Center(child: Text(widget.diaDose,style: TextStyle(color: Colors.white),)),
+          child: Center(child: Text(widget.diaDose,
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,fontSize: 16)
+            )),
         ));
   }
 }
