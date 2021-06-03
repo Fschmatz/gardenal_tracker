@@ -8,7 +8,7 @@ class AppInfo extends StatelessWidget {
     launch(url);
   }
 
-  Color? themeColorApp = Color(0xFF298bd6);
+  Color? themeColorApp = Color(0xFF508BDF);
 
   @override
   Widget build(BuildContext context) {

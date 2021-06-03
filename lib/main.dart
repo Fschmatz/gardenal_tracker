@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         backgroundColor: Color(0xFFF7F7F9),
         primaryColor: Color(0xFFF7F7F9),
-        accentColor: Colors.blue[700],
+        accentColor: Color(0xFF508BDF),
         scaffoldBackgroundColor: Color(0xFFF7F7F9),
       ),
       home: MyHomePage(title: 'Gardenal Tracker'),
