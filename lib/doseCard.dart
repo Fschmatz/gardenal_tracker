@@ -17,8 +17,8 @@ class _DoseCardState extends State<DoseCard> {
   Widget build(BuildContext context) {
 
     return Card(
-      color: Color(0xFF3A8CCB).withOpacity(0.8),
-        elevation: 2,
+      color: Color(0xFF3F8CCB),
+        elevation: 3,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

@@ -8,20 +8,19 @@ class AppInfo extends StatelessWidget {
     launch(url);
   }
 
-  Color? themeColorApp = Color(0xFF3A8CCB);
+  Color? themeColorApp = Color(0xFF3F8CCB);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("App Info"),
-          elevation: 0,
         ),
         body: ListView(children: <Widget>[
           const SizedBox(height: 20),
           CircleAvatar(
             radius: 55,
-            backgroundColor: Colors.pink[200],
+            backgroundColor: Colors.orange,
             child: CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage('assets/avatar.jpg'),
@@ -29,7 +28,7 @@ class AppInfo extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Center(
-            child: Text('Gardenal de Cachorro Tracker Versão 1.1',
+            child: Text('Gardenal de Cachorro Tracker Versão 1.1.1',
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
@@ -83,7 +82,7 @@ class AppInfo extends StatelessWidget {
             leading: SizedBox(
               height: 0.1,
             ),
-            title: Text("Source Code".toUpperCase(),
+            title: Text("Código Fonte".toUpperCase(),
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,

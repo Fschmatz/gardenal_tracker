@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        backgroundColor: Color(0xFFF7F7F9),
-        primaryColor: Color(0xFFF7F7F9),
-        accentColor: Color(0xFF3A8CCB),
-        scaffoldBackgroundColor: Color(0xFFF7F7F9),
+        backgroundColor: Color(0xFFF7F7F7),
+        primaryColor: Color(0xFFF7F7F7),
+        accentColor: Color(0xFF3F8CCB),
+        scaffoldBackgroundColor: Color(0xFFFFFFFF),
       ),
       home: MyHomePage(title: 'Gardenal Tracker'),
     );
@@ -73,7 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
         title: Text(widget.title),
         actions: [
           IconButton(onPressed: () {
@@ -115,13 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             adicionarDose();
           },
-          backgroundColor: Colors.pinkAccent[700],
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          label: Text('Adicionar Dose Diária',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),),
-          tooltip: 'Adicionar Dose',
-          icon: Icon(Icons.add,size: 26,),
+          backgroundColor: Colors.blue[700],
+          label: Text('Adicionar Dose Diária',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16),),
+          icon: Icon(Icons.add,size: 25,),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
