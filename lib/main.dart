@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gardenal_tracker/appInfo.dart';
 import 'package:gardenal_tracker/doseCard.dart';
 import 'package:gardenal_tracker/doseGardenalDao.dart';
-
 import 'package:intl/intl.dart';
 
 void main() {
@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gardenal Tracker',
+      themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        backgroundColor: Color(0xFFF0F0F2),
-        primaryColor: Color(0xFFF0F0F2),
-        accentColor: Colors.blue[600],
+        backgroundColor: Color(0xFFF7F7F9),
+        primaryColor: Color(0xFFF7F7F9),
+        accentColor: Colors.blue[700],
         scaffoldBackgroundColor: Color(0xFFF7F7F9),
       ),
       home: MyHomePage(title: 'Gardenal Tracker'),
@@ -72,9 +73,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text(widget.title),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.info_outline_rounded))
+          IconButton(onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) => AppInfo(),
+                  fullscreenDialog: true,
+                ));
+          }, icon: Icon(Icons.info_outline_rounded))
         ],
       ),
       body: ListView(
@@ -106,6 +115,9 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             adicionarDose();
           },
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
           label: Text('Adicionar Dose Diária',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),),
           tooltip: 'Adicionar Dose',
           icon: Icon(Icons.add,size: 26,),

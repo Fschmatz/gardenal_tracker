@@ -16,24 +16,20 @@ class _DoseCardState extends State<DoseCard> {
   @override
   Widget build(BuildContext context) {
 
-    return Container(
-      height: 100,
-      width: 100,
-      child: Card(
-        color: Colors.green[700],
-          elevation: 2,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
+    return Card(
+      color: Colors.blueAccent,
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: InkWell(
+          customBorder: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
           ),
-          child: InkWell(
-            customBorder: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            onLongPress: () => widget.delete(
-              (widget.id),
-            ),
-            child: Center(child: Text(widget.diaDose,style: TextStyle(color: Colors.white),)),
-          )),
-    );
+          onLongPress: () => widget.delete(
+            (widget.id),
+          ),
+          child: Center(child: Text(widget.diaDose,style: TextStyle(color: Colors.white),)),
+        ));
   }
 }
